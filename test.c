@@ -23,10 +23,10 @@ int main(){
 			pos = ftell(fp);
 			printf("after pos: %d\n", pos);// 反馈当前的写入位置 结果证明字符是一个一个写的
 		}
-		rewind(fp);
+		rewind(fp);// 将位置清0
 		fputc('x', fp);// 
 		pos = ftell(fp);
-		printf("after pos: %d\n", pos);// 27
+		printf("after pos: %d\n", pos);// 1
 	}
 
 	fclose(fp);
